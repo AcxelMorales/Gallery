@@ -2,7 +2,8 @@
   <div class="col-md-4">
     <h3 class="mt-3">Select the files</h3>
     <hr>
-    <div [files]="files" appNgDropFiles [ngClass]="{'file-over': isOnDrop}" (mouseOn)="isOnDrop = $event" class="well drop-zone mt-4">
+    <div [files]="files" appNgDropFiles [ngClass]="{'file-over': isOnDrop}" (mouseOn)="isOnDrop = $event"
+      class="well drop-zone mt-4">
       <h4>Drop the files here</h4>
       <img src="assets/img/drop-images.png" alt="Drop image">
     </div>
@@ -11,10 +12,11 @@
     <h3 class="mt-3">Upload files</h3>
     <hr>
     <div class="mt-4">
-      <button [disabled]="files.length === 0" (click)="uploadImages()" class="btn btn-outline-primary mr-3">Upload to Firebase</button>
+      <button [disabled]="files.length === 0" (click)="uploadImages()" class="btn btn-outline-primary mr-3">Upload to
+        Firebase</button>
       <button (click)="cleanFiles()" class="btn btn-outline-success">Clean</button>
     </div>
-    <table class="table table-striped">
+    <table class="table table-striped" *ngIf="files.length > 0">
       <thead>
         <tr>
           <th scope="col">Filename</th>
@@ -28,11 +30,15 @@
           <td>{{ f.file.size / 1024 / 1024 | number: '.2-2' }} MB</td>
           <td>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': f.progress + '%' }" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': f.progress + '%' }" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
+    <div class="img mt-5" *ngIf="files.length === 0">
+      <img src="../../../assets/img/undraw_no_data_qbuo.svg" alt="no-data">
+    </div>
   </div>
 </div>

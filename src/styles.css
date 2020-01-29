@@ -33,6 +33,11 @@ body {
   color: green
 }
 
+.img {
+  text-align: center;
+  width: 100%;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

@@ -1,4 +1,4 @@
-import { Directive, EventEmitter, ElementRef, HostListener, Input, Output } from '@angular/core';
+import { Directive, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 import Swal from 'sweetalert2';
 
