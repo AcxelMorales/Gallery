@@ -72,7 +72,7 @@ export class NgDropFilesDirective {
           icon: 'warning',
           title: 'Oops...',
           text: `The ${fileName} file is already added`
-        })
+        });
 
         return true;
       }

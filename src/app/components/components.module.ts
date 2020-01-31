@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { PhotosComponent } from './photos/photos.component';
 import { LoadPhotoComponent } from './load-photo/load-photo.component';
 import { NavComponent } from './shared/nav/nav.component';
+import { ComponentsComponent } from './components.component';
 
 import { NgDropFilesDirective } from '../directives/ng-drop-files.directive';
 
@@ -13,6 +14,7 @@ import { NgDropFilesDirective } from '../directives/ng-drop-files.directive';
     PhotosComponent,
     LoadPhotoComponent,
     NavComponent,
+    ComponentsComponent,
     NgDropFilesDirective
   ],
   exports: [

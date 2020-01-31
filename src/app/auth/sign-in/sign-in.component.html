@@ -1,0 +1,35 @@
+<div class="login animated fadeIn">
+  <div class="man"></div>
+  <div class="woman"></div>
+  <div class="form">
+    <form [formGroup]="form" #f="ngForm" (ngSubmit)="onSignIn(f)">
+      <h1 class="mb-4">¡Welcome!</h1>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          autocomplete="off"
+          name="email"
+          formControlName="email"
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          formControlName="password"
+          required
+          minlength="6"
+        >
+      </div>
+      <button [disabled]="f.invalid" type="submit" class="btn btn-outline-primary btn-block">Sign In</button>
+      <button (click)="onSignUp()" type="button" class="btn btn-outline-success btn-block">Sign Up</button>
+    </form>
+  </div>
+</div>

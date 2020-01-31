@@ -69,3 +69,54 @@ body {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
+.login {
+  /* background-color: rgba(0, 0, 0, .5); */
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.login .man {
+  /* border: 1px solid black; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-image: url(./assets/img/man.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login .woman {
+  /* border: 1px solid black; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background-image: url(./assets/img/woman.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.form {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+}
+
+.form h1 {
+  color: #6f7efa;
+}
+
+.form form {
+  margin: 0 auto;
+  width: 20em;
+}
+
+.r {
+  font-size: 2em;
+}
