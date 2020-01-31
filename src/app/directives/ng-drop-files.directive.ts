@@ -50,8 +50,6 @@ export class NgDropFilesDirective {
         this.files.push(newFile);
       }
     }
-
-    console.log(this.files);
   }
 
   // Validations

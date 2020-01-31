@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { FirebaseStorageService } from '../../../services/firebase-storage.service';
 
@@ -7,12 +7,9 @@ import { FirebaseStorageService } from '../../../services/firebase-storage.servi
   templateUrl: './nav.component.html',
   styles: []
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
 
   constructor(private _firebaseStorage: FirebaseStorageService) { }
-
-  ngOnInit() {
-  }
 
   onLogOut(): void {
     this._firebaseStorage.logOut();
