@@ -8,6 +8,7 @@ import { NavComponent } from './shared/nav/nav.component';
 import { ComponentsComponent } from './components.component';
 
 import { NgDropFilesDirective } from '../directives/ng-drop-files.directive';
+import { NoPageComponent } from './shared/no-page/no-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgDropFilesDirective } from '../directives/ng-drop-files.directive';
     LoadPhotoComponent,
     NavComponent,
     ComponentsComponent,
-    NgDropFilesDirective
+    NgDropFilesDirective,
+    NoPageComponent
   ],
   exports: [
     PhotosComponent,
@@ -24,7 +26,7 @@ import { NgDropFilesDirective } from '../directives/ng-drop-files.directive';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ]
 })
 export class ComponentsModule { }

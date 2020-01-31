@@ -7,19 +7,26 @@ import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { ComponentsComponent } from './components/components.component';
 
+import { AuthGuard } from './guards/auth.guard';
+import { NoPageComponent } from './components/shared/no-page/no-page.component';
+
 const routes: Routes = [
   {
     path: '',
     component: ComponentsComponent,
+    canActivate: [AuthGuard],
     children: [
-      { path: 'photos', component: PhotosComponent },
-      { path: 'load-photos', component: LoadPhotoComponent },
-      { path: '', redirectTo: '/photos', pathMatch: 'full' }
+      { path: 'photos', component: PhotosComponent, canActivate: [AuthGuard] },
+      { path: 'load-photos', component: LoadPhotoComponent, canActivate: [AuthGuard] },
+      { path: '', pathMatch: 'full', redirectTo: 'sign-in' },
+      { path: '***', pathMatch: 'full', redirectTo: '404' }
     ]
   },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'photos' }
+  { path: '404', component: NoPageComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'sign-in' },
+  { path: '***', pathMatch: 'full', redirectTo: '404' }
 ];
 
 @NgModule({
